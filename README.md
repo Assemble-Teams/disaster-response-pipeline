@@ -24,16 +24,16 @@ The Project is part of Data Science Nanodegree Program by [Udacity](https://www.
 
 ### Messages potential Categories
 
-    ```
-    ['request', 'offer', 'aid_related', 'medical_help', 'medical_products',
-        'search_and_rescue', 'security', 'military', 'child_alone', 'water',
-        'food', 'shelter', 'clothing', 'money', 'missing_people', 'refugees',
-        'death', 'other_aid', 'infrastructure_related', 'transport',
-        'buildings', 'electricity', 'tools', 'hospitals', 'shops',
-        'aid_centers', 'other_infrastructure', 'weather_related', 'floods',
-        'storm', 'fire', 'earthquake', 'cold', 'other_weather',
-        'direct_report']
-    ```
+```
+['request', 'offer', 'aid_related', 'medical_help', 'medical_products',
+    'search_and_rescue', 'security', 'military', 'child_alone', 'water',
+    'food', 'shelter', 'clothing', 'money', 'missing_people', 'refugees',
+    'death', 'other_aid', 'infrastructure_related', 'transport',
+    'buildings', 'electricity', 'tools', 'hospitals', 'shops',
+    'aid_centers', 'other_infrastructure', 'weather_related', 'floods',
+    'storm', 'fire', 'earthquake', 'cold', 'other_weather',
+    'direct_report']
+```
 
 <a name="structure"></a>
 # Folders structure
@@ -69,6 +69,7 @@ The Project is part of Data Science Nanodegree Program by [Udacity](https://www.
     `conda activate py36`
 - Install required packages by running the following command in the app's directory
     `pip install -r requirements.txt`
+- In order to be able to download the model file you need to have git-lfs installed and used in the local repository copy. For that, install Git LFS following the instructions in https://git-lfs.github.com/. Now install git-lfs in the local repository with `git lfs install`
 
 <a name="preprocess"></a>
 ## Data processing
