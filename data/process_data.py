@@ -55,7 +55,8 @@ def save_data(data, database_filename):
         data {DataFrame} -- DataFrame object
         database_filename {string} -- Database filename
     """
-    os.remove(database_filename)
+    if os.path.exists(database_filename):
+        os.remove(database_filename)
     engine = create_engine('sqlite:///{}'.format(database_filename))
     data.to_sql('messages_categories', engine, index=False)
 
