@@ -89,20 +89,20 @@ def build_model():
             max_features="auto")))
     ])
     print("Pipeline Parameters: {}".format(pipeline.get_params()))
-    # parameters = {
-    #     'features__text_pipeline__vect__max_df': (0.9, 1.0),
-    #     # 'features__text__vect__max_features': (None, 1000, 5000),
-    #     # 'features__text__vect__ngram_range': [(1, 1), (1, 2)], # unigrams or bigrams
-    #     'features__text__reduce_dim__n_components': [1, 2, 10],
-    #     # 'clf__estimator__max_depth': [None, 10, 20],
-    #     'clf__estimator__min_samples_leaf': [4, 10],
-    # #     'clf__estimator__n_estimators': [1, 10, 50],
-    #     'clf__estimator__criterion': ['gini', 'entropy'],
-    # #     'clf__estimator__max_features': ['sqrt', 'log2'],
-    # }
-    # clf = GridSearchCV(estimator=pipeline, param_grid=parameters, 
-    #     n_jobs=-1, verbose=2)
-    return pipeline
+    parameters = {
+        'features__text__vect__max_df': (0.9, 1.0),
+        'features__text__vect__max_features': (None, 1000, 5000),
+        # 'features__text__vect__ngram_range': [(1, 1), (1, 2)], # unigrams or bigrams
+        # 'features__text__reduce_dim__n_components': [1, 2, 10],
+        # 'clf__estimator__max_depth': [None, 10, 20],
+        'clf__estimator__min_samples_leaf': [4, 10],
+    #     'clf__estimator__n_estimators': [1, 10, 50],
+        # 'clf__estimator__criterion': ['gini', 'entropy'],
+    #     'clf__estimator__max_features': ['sqrt', 'log2'],
+    }
+    clf = GridSearchCV(estimator=pipeline, param_grid=parameters,
+        n_jobs=-1, verbose=2)
+    return clf
 
 def evaluate_model(model, x_test, y_test, category_names):
     """Evaluate the MultiOutput Classifier model
