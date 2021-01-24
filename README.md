@@ -112,10 +112,9 @@ pylint --rcfile .pylintrc models/train_classifier.py
 3. Go to http://0.0.0.0:3001/
 You will get the home page with visualizations of the used training data set.
 
-Sample Home Page
-
+<!-- Sample Home Page
 <img src="screenshots/sample_home.png" width="70%" height="70%">
-
+--> 
 ## Execution examples
 
 - The message catgeories are highlighted in green
